@@ -8,7 +8,7 @@ const FriendCard = ({friend}) => {
     return (
         <Link to={`/friendDetails/${id}`} className='flex flex-col justify-center items-center shadow-xl p-8 space-y-5 rounded-2xl'>
             <div>
-                <img className="w-38 h-38 rounded-full mx-auto object-cover " src={picture} alt="profile image" />
+                <img className="w-38 h-38 rounded-full mx-auto object-center " src={picture} alt="profile image" />
             </div>
              <div className='flex flex-col justify-center items-center space-y-5'>
                 <h1 className='font-bold text-2xl'>{name}</h1>

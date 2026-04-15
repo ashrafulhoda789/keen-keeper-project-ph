@@ -11,11 +11,11 @@ const Banner = () => {
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-10'>
-                <div className='text-center shadow-xl shadow-gray-200 p-7'>
+                <div className='text-center shadow-xl shadow-gray-200 p-7 rounded-2xl'>
                     <h3 className='text-xl text-green-300 md:text-3xl'>10</h3>
                     <h4 className='text-lg text-gray-500'>Total Friends</h4>
                 </div>
-                <div className='text-center shadow-xl shadow-gray-200 p-7'>
+                <div className='text-center shadow-xl shadow-gray-200 p-7 rounded-2xl'>
                     <h3 className='text-xl text-green-300 md:text-3xl'>3</h3>
                     <h4 className='text-lg text-gray-500'>On Track</h4>
                 </div>
@@ -23,7 +23,7 @@ const Banner = () => {
                     <h3 className='text-xl text-green-300 md:text-3xl'>6</h3>
                     <h4 className='text-lg text-gray-500'>Need Attention</h4>
                 </div>
-                <div className='text-center shadow-xl shadow-gray-200 p-7'>
+                <div className='text-center shadow-xl shadow-gray-200 p-7 rounded-2xl'>
                     <h3 className='text-xl text-green-300 md:text-3xl'>12</h3>
                     <h4 className='text-lg text-gray-500'>Interaction This Month</h4>
                 </div>
