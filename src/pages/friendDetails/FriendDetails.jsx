@@ -15,17 +15,17 @@ const FriendDetails = () => {
     const expectedFriend = friends.find(friend => friend.id == friendId);
     const { name, picture, email, days_since_contact, status, tags, bio, goal, next_due_date } = expectedFriend;
     return (
-        <div className='w-10/12 mx-auto my-10 grid gap-7 grid-rows-3 grid-cols-3'>
-            <div className='col-span-1 row-span-2 flex flex-col justify-center items-center shadow-xl p-8 space-y-5 rounded-2xl'>
+        <div className='w-10/12 mx-auto my-10 grid gap-7 grid-rows-3 grid-cols-1 md:grid-cols-3 justify-items-center'>
+            <div className='row-span-2 flex flex-col justify-center items-center shadow-xl p-8 space-y-5 rounded-2xl'>
                 <div>
                     <img className="w-42 h-42 rounded-full mx-auto  object-center " src={picture} alt="" />
                 </div>
 
                 <div className='space-y-5 flex flex-col justify-center items-center'>
-                    <h1 className='font-bold text-2xl'>{name}</h1>
+                    <h1 className='font-bold text-2xl text-center'>{name}</h1>
                     <p className={`w-fit px-2 py-1 rounded-full font-medium text-white ${status === 'On-track' ? 'bg-green-500' : status === 'Almost due' ? 'bg-yellow-500' : 'bg-red-400'} `} >{status}</p>
 
-                    <div className='flex flex-col md:flex-row items-center gap-3'>
+                    <div className='flex flex-col lg:flex-row items-center gap-3'>
                         {
                             tags.map((tag, index) => <div className='bg-green-100 text-green-600 rounded-full px-2 py-1' key={index}>
                                 <p>{tag}</p>
@@ -37,10 +37,10 @@ const FriendDetails = () => {
                     <p className='text-gray-600'>Preferred: {email}</p>
                 </div>
             </div>
-            <div className='grid grid-cols-3 gap-10 col-span-2'>
-                <div className='flex flex-col justify-center items-center col-span-1 shadow-xl shadow-gray-200 p-7 rounded-2xl'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-10 col-span-2'>
+                <div className='flex flex-col justify-center items-center  col-span-1 shadow-xl shadow-gray-200 p-7 rounded-2xl'>
                     <h3 className='text-xl md:text-3xl font-semibold'>{days_since_contact}</h3>
-                    <h4 className='text-lg text-gray-500'>Days Since Contact</h4>
+                    <h4 className='text-lg text-gray-500 text-center'>Days Since Contact</h4>
                 </div>
                 <div className='flex flex-col justify-center items-center col-span-1 text-center shadow-xl shadow-gray-200 p-7 rounded-2xl'>
                     <h3 className='text-xl md:text-3xl font-semibold'>{goal}</h3>
