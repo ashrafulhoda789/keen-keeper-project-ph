@@ -5,32 +5,23 @@ export const FriendContext = createContext();
 
 const FriendProvider = ({children}) => {
 
-    const [call, setCall] = useState([]);
-    const [text, setText] = useState([]);
-    const [video, setVideo] = useState([]);
+    const [timeLine, setTimeLine] = useState([]);
 
-    const handleCall = (currentFriend) =>{
-        toast.success(`Call with ${currentFriend.name}`,{
-            position: "top-center"
-        });
-    };
+    const handleTimeLine = (currFriend, type) =>{
+        const newFriend = {
+            ... currFriend,
+            type: type,
+            time: new Date()
+        };
 
-    const handleText = (currentFriend) =>{
-        toast.success(`Text with ${currentFriend.name}`,{
-            position: "top-center"
+        setTimeLine(prev => [...prev, newFriend]);
+        toast.success(`${type} with ${currFriend.name}`,{
+            position: 'top-center'
         });
-    };
-
-    const handleVideo = (currentFriend) =>{
-        toast.success(`Video with ${currentFriend.name}`,{
-            position: "top-center"
-        });
-    };
+    }
 
     const data = {
-        call, setCall, handleCall,
-        text, setText, handleText,
-        video, setVideo, handleVideo
+        timeLine, setTimeLine, handleTimeLine
     }
     return (
         <FriendContext.Provider value={data}>{children}</FriendContext.Provider>

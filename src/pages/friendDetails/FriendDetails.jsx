@@ -16,7 +16,7 @@ const FriendDetails = () => {
     const expectedFriend = friends.find(friend => friend.id == friendId);
     const { name, picture, email, days_since_contact, status, tags, bio, goal, next_due_date } = expectedFriend;
 
-    const { handleCall, handleText, handleVideo } = useContext(FriendContext);
+    const { handleTimeLine } = useContext(FriendContext);
     // console.log(friendContext);
     return (
         <div className='w-10/12 mx-auto my-10 grid gap-7 grid-rows-3 grid-cols-1 md:grid-cols-3'>
@@ -73,9 +73,9 @@ const FriendDetails = () => {
             <div className='col-span-2 flex flex-col justify-around shadow-xl shadow-gray-200 p-7 rounded-2xl '>
                 <h2 className='text-2xl font-semibold'>Quick Check-In</h2>
                 <div className='grid grid-cols-3 gap-5'>
-                    <Link onClick={() => handleCall(expectedFriend)} className='border border-gray-200 flex flex-col justify-center items-center gap-4 col-span-1 shadow-xl shadow-gray-200 p-5 bg-gray-50 rounded-2xl hover:bg-gray-100'> <IoCallSharp></IoCallSharp> Call</Link>
-                    <Link onClick={() => handleText(expectedFriend)} className='border border-gray-200 flex flex-col justify-center items-center gap-4 col-span-1 shadow-xl shadow-gray-200 p-7 bg-gray-50 rounded-2xl hover:bg-gray-100'> <IoMdText></IoMdText> Text</Link>
-                    <Link onClick={() => handleVideo(expectedFriend)} className='border border-gray-200 flex flex-col justify-center items-center gap-4 col-span-1 shadow-xl shadow-gray-200 p-7 bg-gray-50 rounded-2xl hover:bg-gray-100'> <FaVideo></FaVideo> Video</Link>
+                    <Link onClick={() => handleTimeLine(expectedFriend, 'call')} className='border border-gray-200 flex flex-col justify-center items-center gap-4 col-span-1 shadow-xl shadow-gray-200 p-5 bg-gray-50 rounded-2xl hover:bg-gray-100'> <IoCallSharp></IoCallSharp> Call</Link>
+                    <Link onClick={() => handleTimeLine(expectedFriend, 'text')} className='border border-gray-200 flex flex-col justify-center items-center gap-4 col-span-1 shadow-xl shadow-gray-200 p-7 bg-gray-50 rounded-2xl hover:bg-gray-100'> <IoMdText></IoMdText> Text</Link>
+                    <Link onClick={() => handleTimeLine(expectedFriend, 'video')} className='border border-gray-200 flex flex-col justify-center items-center gap-4 col-span-1 shadow-xl shadow-gray-200 p-7 bg-gray-50 rounded-2xl hover:bg-gray-100'> <FaVideo></FaVideo> Video</Link>
                 </div>
             </div>
         </div>
