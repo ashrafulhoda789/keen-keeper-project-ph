@@ -6,6 +6,9 @@ import { IoCallSharp } from 'react-icons/io5';
 import { MdDelete } from 'react-icons/md';
 import { Link, useLoaderData, useParams } from 'react-router';
 import { FriendContext } from '../../context/FriendContext';
+import textImage from '../../assets/text.png'
+import callImage from '../../assets/call.png'
+import videoImage from '../../assets/video.png'
 
 const FriendDetails = () => {
     const { friendId } = useParams();
@@ -73,9 +76,9 @@ const FriendDetails = () => {
             <div className='col-span-2 flex flex-col justify-around shadow-xl shadow-gray-200 p-7 rounded-2xl '>
                 <h2 className='text-2xl font-semibold'>Quick Check-In</h2>
                 <div className='grid grid-cols-3 gap-5'>
-                    <Link onClick={() => handleTimeLine(expectedFriend, 'call')} className='border border-gray-200 flex flex-col justify-center items-center gap-4 col-span-1 shadow-xl shadow-gray-200 p-5 bg-gray-50 rounded-2xl hover:bg-gray-100'> <IoCallSharp></IoCallSharp> Call</Link>
-                    <Link onClick={() => handleTimeLine(expectedFriend, 'text')} className='border border-gray-200 flex flex-col justify-center items-center gap-4 col-span-1 shadow-xl shadow-gray-200 p-7 bg-gray-50 rounded-2xl hover:bg-gray-100'> <IoMdText></IoMdText> Text</Link>
-                    <Link onClick={() => handleTimeLine(expectedFriend, 'video')} className='border border-gray-200 flex flex-col justify-center items-center gap-4 col-span-1 shadow-xl shadow-gray-200 p-7 bg-gray-50 rounded-2xl hover:bg-gray-100'> <FaVideo></FaVideo> Video</Link>
+                    <Link onClick={() => handleTimeLine(expectedFriend, 'call', callImage)} className='border border-gray-200 flex flex-col justify-center items-center gap-4 col-span-1 shadow-xl shadow-gray-200 p-5 bg-gray-50 rounded-2xl hover:bg-gray-100'> <IoCallSharp></IoCallSharp> Call</Link>
+                    <Link onClick={() => handleTimeLine(expectedFriend, 'text', textImage)} className='border border-gray-200 flex flex-col justify-center items-center gap-4 col-span-1 shadow-xl shadow-gray-200 p-7 bg-gray-50 rounded-2xl hover:bg-gray-100'> <IoMdText></IoMdText> Text</Link>
+                    <Link onClick={() => handleTimeLine(expectedFriend, 'video', videoImage)} className='border border-gray-200 flex flex-col justify-center items-center gap-4 col-span-1 shadow-xl shadow-gray-200 p-7 bg-gray-50 rounded-2xl hover:bg-gray-100'> <FaVideo></FaVideo> Video</Link>
                 </div>
             </div>
         </div>

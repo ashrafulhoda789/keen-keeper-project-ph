@@ -7,10 +7,11 @@ const FriendProvider = ({children}) => {
 
     const [timeLine, setTimeLine] = useState([]);
 
-    const handleTimeLine = (currFriend, type) =>{
+    const handleTimeLine = (currFriend, type, image) =>{
         const newFriend = {
             ... currFriend,
             type: type,
+            image,
             time: new Date()
         };
 

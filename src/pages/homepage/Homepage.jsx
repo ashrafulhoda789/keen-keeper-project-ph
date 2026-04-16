@@ -6,7 +6,7 @@ const Homepage = () => {
     return (
         <div>
             <Banner></Banner>
-            <div className='divider w-9/12 mx-auto'></div>
+            <div className='divider w-10/12 mx-auto'></div>
             <AllFriends></AllFriends>
         </div>
     );
