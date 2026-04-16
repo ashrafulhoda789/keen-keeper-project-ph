@@ -19,7 +19,7 @@ const TimeLine = () => {
 
     const sortedFriend = [...filterFriend].sort((a, b) => new Date(b.time) - new Date(a.time));
 
-    console.log(sortedFriend.time);
+    // console.log(sortedFriend.time);
 
     return (
         <div className='w-10/12 mx-auto my-10'>

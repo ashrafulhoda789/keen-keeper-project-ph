@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import FriendCard from '../../../ui/FriendCard';
 import { BeatLoader } from 'react-spinners';
+import { FriendContext } from '../../../context/FriendContext';
 
 // const friendsPromise = fetch('/friendData.json').then(res => res.json());
 
@@ -9,19 +10,7 @@ const AllFriends = () => {
     // const friends = use(friendsPromise);
     // console.log(friends);
 
-    const [friends, setFriends] = useState([]);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const res = await fetch('/friendData.json');
-            const data = await res.json();
-
-            setFriends(data);
-            setLoading(false);
-        };
-        fetchData();
-    }, []);
+    const {friends, loading} = useContext(FriendContext);
 
     return (
         <div className='w-10/12 mx-auto my-10'>
