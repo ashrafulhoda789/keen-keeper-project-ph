@@ -15,7 +15,7 @@ const FriendCard = ({friend}) => {
                 <h4 className='text-gray-500'>{days_since_contact}d ago</h4>
                 <div className='flex flex-col md:flex-row items-center gap-3'>
                     {
-                        tags.map((tag,index) => <div className='bg-green-100 text-green-600 rounded-full px-2 py-1' key={index}>
+                        tags.map((tag,index) => <div className='bg-green-100 border text-green-600 rounded-full px-2 py-1' key={index}>
                             <p>{tag}</p>
                         </div> )
                     }
