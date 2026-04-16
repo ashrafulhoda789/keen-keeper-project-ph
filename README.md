@@ -1,16 +1,33 @@
-# React + Vite
+# 📱 KeenKeeper — Keep Your Friendships Alive
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The **KeenKeeper** is a modern React-based web application designed to help users maintain and strengthen their relationships. It allows users to track interactions (calls, texts, video chats) with friends, monitor communication frequency, and stay consistent with relationship goals.
 
-Currently, two official plugins are available:
+The web app provides a clean UI with analytics and timeline features to ensure you never lose touch with important people in your life.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- HTML5
+- Tailwind CSS  
+- DaisyUI  
+- React.js  
+- React Router  
+- Context API  
+- Recharts  
+- React Icons  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- 👥 View all friends with detailed profiles  
+- 📊 Track interactions (Call, Text, Video)  
+- 🧠 Timeline to store communication history  
+- 📈 Dynamic analytics with charts  
+- 🎯 Relationship goal tracking (connect every X days)  
+- 📱 Fully responsive design  
+- 🎨 Clean and modern UI
+
+## Live Link: https://keen-keeper-project-ph.netlify.app/
+
